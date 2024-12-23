@@ -8,10 +8,10 @@ class GCObserver {
     current;
     observer;
     start() {
-        if (!this.observer) {
-            this.lastTime = this.startTime = Date.now();
-            this.total = this.current = 0;
-            this.observer = new PerformanceObserver((items) => {
+        // if (!this.observer) {
+        //    this.lastTime = this.startTime = Date.now();
+           // this.total = this.current = 0;
+          //  this.observer = new PerformanceObserver((items) => {
                 items.getEntries().forEach((item) => {
                     this.current += item.duration;
                     this.total += item.duration;
